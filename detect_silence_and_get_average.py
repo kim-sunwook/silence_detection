@@ -17,9 +17,7 @@ def detect_silence_at_end_of_mp4(file_path, silence_threshold, min_silence_len):
     audio_extract_method  = AudioExtractMethod.METHOD_1
     
     if audio_extract_method == AudioExtractMethod.METHOD_1:
-        ## METHOD 1 START
         audio_segment = AudioSegment.from_file(file_path)
-        ## METHOD 1 END
     elif audio_extract_method == AudioExtractMethod.METHOD_2:
         # Extract audio from the MP4 file
         video = mp.VideoFileClip(file_path)
